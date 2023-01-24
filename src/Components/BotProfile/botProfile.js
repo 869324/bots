@@ -1,7 +1,7 @@
 import "./botProfile.css";
 
 function BotProfile(props) {
-  const { bot, handleClick, armyView } = props;
+  const { bot, handleClick, armyView, removeFromCollection } = props;
 
   return (
     <div className="bot-profile" onClick={() => handleClick(bot)}>
@@ -64,10 +64,11 @@ function BotProfile(props) {
         </div>
 
         {armyView && (
-          <div className="profile-span">
-            <div className="profile-info">
-              <label className="bot-delete">+</label>
-            </div>
+          <div
+            className="bot-delete"
+            onClick={() => removeFromCollection(bot.id)}
+          >
+            +
           </div>
         )}
       </div>

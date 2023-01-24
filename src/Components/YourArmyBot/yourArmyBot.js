@@ -15,7 +15,12 @@ function YourArmyBot(props) {
 
       <div className="bots">
         {army.map((bot) => (
-          <BotProfile bot={bot} handleClick={handleClick} armyView={true} />
+          <BotProfile
+            bot={bot}
+            handleClick={handleClick}
+            armyView={true}
+            removeFromCollection={removeFromCollection}
+          />
         ))}
       </div>
     </div>

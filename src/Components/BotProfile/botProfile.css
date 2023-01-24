@@ -41,4 +41,5 @@ img {
   color: red;
   font-size: 56px;
   transform: rotate(45deg);
+  cursor: pointer;
 }
